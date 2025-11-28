@@ -1,15 +1,11 @@
-/* 1. Tailwind v4 – moraju biti prvi! */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* 2. Ostali importi (tw-animate-css i slično) */
 @import "tw-animate-css";
 
-/* 3. Dark mode varijanta – Tailwind v4 način */
 @custom-variant dark (&:is(.dark *));
 
-/* 4. Sve tvoje custom CSS varijable (ostaju iste) */
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -81,7 +77,6 @@
   --sidebar-ring: oklch(0.439 0 0);
 }
 
-/* 5. Theme inline – Tailwind v4 način */
 @theme inline {
   --font-sans: "Geist", "Geist Fallback";
   --font-mono: "Geist Mono", "Geist Mono Fallback";
@@ -123,13 +118,12 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-/* 6. Base stilovi – koriste @apply tek kad su Tailwind direktive učitane */
+/* OVO JE BIO PROBLEM – nedostajala je zatvorena zagrada */
 @layer base {
   * {
-    {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
   }
-}
+} /* <-- DODANA NEDOSTAJUĆA ZAGRADA */
