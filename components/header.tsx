@@ -16,7 +16,8 @@ export function Header() {
     const handleScroll = () => {
       if (pathname !== "/") return
 
-      const sections = document.querySelectorAll("section[id]")
+      // ✅ KLJUČNA ISPRAVKA → tipiranje da su sekcije HTMLElement
+      const sections = document.querySelectorAll<HTMLElement>("section[id]")
       let current = ""
 
       sections.forEach((section) => {
@@ -38,14 +39,14 @@ export function Header() {
 
     if (pathname === "/") {
       const element = document.getElementById(sectionId)
-      if (element) {
+      if (element instanceof HTMLElement) {
         element.scrollIntoView({ behavior: "smooth" })
       }
     } else {
       router.push("/")
       setTimeout(() => {
         const element = document.getElementById(sectionId)
-        if (element) {
+        if (element instanceof HTMLElement) {
           element.scrollIntoView({ behavior: "smooth" })
         }
       }, 100)
