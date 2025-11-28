@@ -6,6 +6,15 @@ import { Trees, Leaf, Bird, Globe, FlaskConical, BookOpen, Search } from "lucide
 
 const funFacts = [
   {
+    id: 1764371339316,
+    title: "ja sam ja jeremina",
+    fact: "sdfasf asd ",
+    source: "",
+    category: "zivotinje",
+    categoryLabel: "Životinje",
+    icon: "leaf",
+  },
+  {
     id: 1,
     title: "Najstarije drvo na svijetu",
     fact: "Najstarije poznato drvo na svijetu je bor Metuzalem (Pinus longaeva) u Kaliforniji, star preko 4.850 godina. Tačna lokacija se čuva u tajnosti kako bi se drvo zaštitilo od vandalizma.",
