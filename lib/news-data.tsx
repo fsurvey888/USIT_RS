@@ -27,7 +27,7 @@ export const newsItems: NewsItem[] = [
     date: "11. decembar 2025..",
     category: "dogadjaji",
     categoryLabel: "Događaji",
-    image: "https://github.com/fsurvey888/USIT_RS/blob/main/public/zicara.jpg",
+    image: "/zicara.jpg",
     slug: "---",
     comments: 0,
     views: 357,
